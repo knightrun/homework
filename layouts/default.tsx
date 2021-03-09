@@ -5,7 +5,7 @@ import { VNode, CreateElement } from 'vue'
 export default class DefaultLayout extends Vue {
   render(h: CreateElement): VNode {
     return (
-      <div class="wrap">
+      <div class="container">
         <nuxt />
       </div>
     )
