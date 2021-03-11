@@ -2,13 +2,18 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    background-color: #26160f;
+    background: #26160f url("/images/bg.png") top/cover no-repeat fixed;
 }
 
 @media all and (min-width: 376px) {
     .content{
         max-width: 375px;
     }
+}
+
+.bg_wrap{
+    width: 100%;
+    height: 781px;
 }
 
 .banner_wrap{
@@ -22,6 +27,7 @@ footer{
     height: 200px;
     padding: 20px;
     color: #f9d648;
+    background-color: #26160f;
 }
 
 .txt{
@@ -44,12 +50,23 @@ footer{
     width: 215px;
     top: 120px;
     left: 82px;
+    animation: textNeon3 .5s linear infinite;
+}
+
+@keyframes textNeon3 {
+    10% { opacity: .8 }
 }
 
 .txt_4{
     width: 50px;
     top: 130px;
     left: 132px;
+    background: url("/images/txt_4.png") top/contain no-repeat;
+    animation: textNeon4 .5s linear infinite;
+}
+
+@keyframes textNeon4 {
+    10% { opacity: .5 }
 }
 
 .txt_5{
@@ -63,8 +80,16 @@ footer{
     top: 227px;
     left: 41px;
     width: 305px;
-    animation: money-move .8s linear infinite;
-    -webkit-animation: money-move .8s linear infinite;
+    animation: moneyMove .8s linear infinite;
+    -webkit-animation: moneyMove .8s linear infinite;
+}
+
+@keyframes moneyMove {
+    10% { transform: translateY(-2px) }
+}
+
+@-webkit-keyframes moneyMove {
+    10% { transform: translateY(-2px) }
 }
 
 .hand_wrap > div{
@@ -75,8 +100,16 @@ footer{
     width: 118px;
     top: 359px;
     left: 125px;
-    animation: money-scale .8s cubic-bezier(0, 1, 1, 1) infinite;
-    -webkit-animation: money-scale .8s cubic-bezier(0, 1, 1, 1) infinite;
+    animation: moneyScale .8s cubic-bezier(0, 1, 1, 1) infinite;
+    -webkit-animation: moneyScale .8s cubic-bezier(0, 1, 1, 1) infinite;
+}
+
+@keyframes moneyScale {
+    10% { transform: scale(1.1) }
+}
+
+@-webkit-keyframes moneyScale {
+    10% { transform: scale(1.1) }
 }
 
 .hand_wrap .hand_right{
@@ -84,8 +117,16 @@ footer{
     top: 374px;
     left: 75px;
     transform-origin: 0 100%;
-    animation: rotate-right .8s cubic-bezier(0, 1, 1, 1) infinite;
-    -webkit-animation: rotate-right .8s cubic-bezier(0, 1, 1, 1) infinite;
+    animation: handRightRotate .8s cubic-bezier(0, 1, 1, 1) infinite;
+    -webkit-animation: handRightRotate .8s cubic-bezier(0, 1, 1, 1) infinite;
+}
+
+@keyframes handRightRotate {
+    10% { transform: rotate(-20deg) }
+}
+
+@-webkit-keyframes handRightRotate {
+    10% { transform: rotate(-20deg) }
 }
 
 .hand_wrap .hand_left{
@@ -93,8 +134,16 @@ footer{
     top: 357px;
     left: 251px;
     transform-origin: 100% 100%;
-    animation: rotate-left .8s cubic-bezier(0, 1, 1, 1) infinite;
-    -webkit-animation: rotate-left .8s cubic-bezier(0, 1, 1, 1) infinite;
+    animation: handLeftRotate .8s cubic-bezier(0, 1, 1, 1) infinite;
+    -webkit-animation: handLeftRotate .8s cubic-bezier(0, 1, 1, 1) infinite;
+}
+
+@keyframes handLeftRotate {
+    10% { transform: rotate(20deg) }
+}
+
+@-webkit-keyframes handLeftRotate {
+    10% { transform: rotate(20deg) }
 }
 
 .coin{
@@ -196,78 +245,46 @@ footer{
 }
 
 .bounce .bg-color{
-    animation: bg-color .3s ease-in;
-    -webkit-animation: bg-color .3s ease-in;
+    animation: bgColorChange .3s ease-in;
+    -webkit-animation: bgColorChange .3s ease-in;
+}
+
+@keyframes bgColorChange {
+    from { background-color: #666 }
+}
+
+@-webkit-keyframes bgColorChange {
+    from { background-color: #666 }
 }
 
 .bounce .bounce-top{
-    animation: bounce-top .5s ease-in;
-    -webkit-animation: bounce-top .5s ease-in;
+    animation: bounceTop .5s ease-in;
+    -webkit-animation: bounceTop .5s ease-in;
+}
+
+@keyframes bounceTop {
+    0% { transform: translateY(80px) }
+    20% { transform: translateY(0) }
+    40% { transform: translateY(30px) }
+    60% { transform: translateY(0) }
+    80% { transform: translateY(10px) }
+    100% { transform: translateY(0px) }
+}
+@-webkit-keyframes bounceTop {
+    0% { transform: translateY(80px) }
+    20% { transform: translateY(0) }
+    40% { transform: translateY(30px) }
+    60% { transform: translateY(0) }
+    80% { transform: translateY(10px) }
+    100% { transform: translateY(0px) }
 }
 
 .bounce .bounce-bottom{
-    animation: bounce-bottom .5s ease-in;
-    -webkit-animation: bounce-bottom .5s ease-in;
+    animation: bounceBottom .5s ease-in;
+    -webkit-animation: bounceBottom .5s ease-in;
 }
 
-@keyframes rotate-left {
-    10% { transform: rotate(20deg) }
-}
-
-@-webkit-keyframes rotate-left {
-    10% { transform: rotate(20deg) }
-}
-
-@keyframes rotate-right {
-    10% { transform: rotate(-20deg) }
-}
-
-@-webkit-keyframes rotate-right {
-    10% { transform: rotate(-20deg) }
-}
-
-@keyframes money-move {
-    10% { transform: translateY(-2px) }
-}
-
-@-webkit-keyframes money-move {
-    10% { transform: translateY(-2px) }
-}
-
-@keyframes money-scale {
-    10% { transform: scale(1.1) }
-}
-
-@-webkit-keyframes money-scale {
-    10% { transform: scale(1.1) }
-}
-
-@keyframes bg-color {
-    from { background-color: #666 }
-}
-
-@-webkit-keyframes bg-color {
-    from { background-color: #666 }
-}
-
-@keyframes bounce-top {
-    0% { transform: translateY(80px) }
-    20% { transform: translateY(0) }
-    40% { transform: translateY(30px) }
-    60% { transform: translateY(0) }
-    80% { transform: translateY(10px) }
-    100% { transform: translateY(0px) }
-}
-@-webkit-keyframes bounce-top {
-    0% { transform: translateY(80px) }
-    20% { transform: translateY(0) }
-    40% { transform: translateY(30px) }
-    60% { transform: translateY(0) }
-    80% { transform: translateY(10px) }
-    100% { transform: translateY(0px) }
-}
-
-@keyframes bounce-bottom {
+@keyframes bounceBottom {
     0% { transform: translateY(-80px) }
     20% { transform: translateY(0) }
     40% { transform: translateY(-30px) }
@@ -275,7 +292,7 @@ footer{
     80% { transform: translateY(-10px) }
     100% { transform: translateY(0px) }
 }
-@-webkit-keyframes bounce-bottom {
+@-webkit-keyframes bounceBottom {
     0% { transform: translateY(-80px) }
     20% { transform: translateY(0) }
     40% { transform: translateY(-30px) }
