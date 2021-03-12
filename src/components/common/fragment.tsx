@@ -1,5 +1,6 @@
 import {Vue, Component} from 'nuxt-property-decorator'
 import {CreateElement, VNode} from 'vue'
+
 import {Functional} from '@/utils/decorators'
 
 @Component

@@ -1,7 +1,7 @@
 import { CreateElement, VNode } from 'vue'
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
-import { IRadioList } from '@/typings/state'
+import { IRadioList } from '~/src/typings/state'
 
 @Component
 export default class RadioInput extends Vue {

@@ -1,7 +1,7 @@
 import {CreateElement, VNode} from 'vue'
 import {Component, Prop, Vue} from 'nuxt-property-decorator'
 
-import {ISelectOptions} from '@/typings/state'
+import {ISelectOptions} from '~/src/typings/state'
 
 @Component
 export default class SelectCustom extends Vue {

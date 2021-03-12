@@ -2,7 +2,7 @@ import {CreateElement, VNode} from 'vue'
 import {Component, Vue} from 'nuxt-property-decorator'
 
 //style
-import '~/assets/styles/join.scss'
+import '@/assets/styles/join.scss'
 
 @Component
 export default class Complete extends Vue {

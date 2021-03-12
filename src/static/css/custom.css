@@ -38,23 +38,51 @@ footer{
     width: 179px;
     top: 83px;
     left: 96px;
+    animation: textNeon 3s linear infinite;
+    -webkit-animation: textNeon 3s linear infinite;
 }
 
 .txt_2{
     width: 215px;
     top: 65px;
-    left: 77px
+    left: 77px;
+    animation: textNeon 3s linear infinite;
+    -webkit-animation: textNeon 3s linear infinite;
+}
+
+@keyframes textNeon {
+    50% { opacity: 1 }
+    60% { opacity: .8 }
+    70% { opacity: 1 }
+}
+
+@-webkit-keyframes textNeon {
+    50% { opacity: 1 }
+    60% { opacity: .8 }
+    70% { opacity: 1 }
 }
 
 .txt_3{
     width: 215px;
     top: 120px;
     left: 82px;
-    animation: textNeon3 .5s linear infinite;
+    opacity: .8;
+    animation: textNeon2 3s linear infinite;
+    -webkit-animation: textNeon2 3s linear infinite;
 }
 
-@keyframes textNeon3 {
-    10% { opacity: .8 }
+@keyframes textNeon2 {
+    20% { opacity: .5 }
+    35% { opacity: 1 }
+    50% { opacity: .5 }
+    65% { opacity: .8 }
+}
+
+@-webkit-keyframes textNeon2 {
+    20% { opacity: .5 }
+    35% { opacity: 1 }
+    50% { opacity: .5 }
+    65% { opacity: .8 }
 }
 
 .txt_4{
@@ -62,11 +90,24 @@ footer{
     top: 130px;
     left: 132px;
     background: url("/images/txt_4.png") top/contain no-repeat;
-    animation: textNeon4 .5s linear infinite;
+    animation: textNeon3 3s linear infinite;
+    -webkit-animation: textNeon3 3s linear infinite;
 }
 
-@keyframes textNeon4 {
-    10% { opacity: .5 }
+@keyframes textNeon3 {
+    78% { opacity: 1 }
+    81% { opacity: .5 }
+    84% { opacity: 1 }
+    87% { opacity: .5 }
+    90% { opacity: 1 }
+}
+
+@-webkit-keyframes textNeon3 {
+    78% { opacity: 1 }
+    81% { opacity: .5 }
+    84% { opacity: 1 }
+    87% { opacity: .5 }
+    90% { opacity: 1 }
 }
 
 .txt_5{
@@ -196,7 +237,8 @@ footer{
 .button_wrap{
     position: fixed;
     width: 367px;
-    right: 0;
+    left:calc(50% + 4px);
+    transform: translateX(-50%);
     bottom: 0;
 }
 

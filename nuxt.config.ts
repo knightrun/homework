@@ -1,4 +1,5 @@
 export default {
+  srcDir: 'src/',
   mode: 'universal',
   target: 'server',
   router: {
