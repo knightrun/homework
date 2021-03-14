@@ -351,15 +351,58 @@ footer{
     opacity: 0;
 }
 
-.blank{
-    animation: snsBlank 3s linear;
+.blank-in{
     opacity: 1;
+    animation: snsBlankIn 2s linear;
+    -webkit-animation: snsBlankIn 2s linear;
 }
 
-@keyframes snsBlank {
+@keyframes snsBlankIn {
     0%, 50% { opacity: 0 }
-    54%, 60% { opacity: .5 }
-    51%, 57%, 63%, 100% { opacity: 1 }
+    55%, 63% { opacity: .2 }
+    51%, 59%, 67%, 100% { opacity: 1 }
+}
+
+@-webkit-keyframes snsBlankIn {
+    0%, 50% { opacity: 0 }
+    55%, 63% { opacity: .2 }
+    51%, 59%, 67%, 100% { opacity: 1 }
+}
+
+.blank-out-in{
+    opacity: 1;
+    animation: snsBlankOutIn 2s linear;
+    -webkit-animation: snsBlankOutIn 2s linear;
+}
+
+@keyframes snsBlankOutIn {
+    0%, 50% { opacity: 1 }
+    55%, 63% { opacity: .2 }
+    51%, 59%, 67%, 100% { opacity: 1 }
+}
+
+@-webkit-keyframes snsBlankOutIn {
+    0%, 50% { opacity: 1 }
+    55%, 63% { opacity: .2 }
+    51%, 59%, 67%, 100% { opacity: 1 }
+}
+
+.blank-out{
+    opacity: 1;
+    animation: snsBlankOut 1s linear;
+    -webkit-animation: snsBlankOut 1s linear;
+}
+
+@keyframes snsBlankOut {
+    0%, 40% { opacity: 1}
+    51%, 71% { opacity: .2 }
+    41%, 61%, 81%, 100% { opacity: 1 }
+}
+
+@-webkit-keyframes snsBlankOut {
+    0%, 40% { opacity: 1}
+    51%, 71% { opacity: .2 }
+    41%, 61%, 81%, 100% { opacity: 1 }
 }
 
 .button_wrap{
