@@ -17,6 +17,7 @@
     width: 100%;
     height: 781px;
     z-index: 1;
+    pointer-events: none;
 }
 
 .banner_wrap{
@@ -251,6 +252,7 @@ footer{
 
 .coin{
     position: absolute;
+    transition: all .2s ease-out;
 }
 
 .coin_1{
