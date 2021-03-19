@@ -1,9 +1,6 @@
 # Homework
 
 ```bash
-# storage clone
-$ git clone https://github.com/knightrun/kakaopay_homework.git
-
 # install dependencies
 $ yarn or yarn install
 
